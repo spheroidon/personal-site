@@ -83,10 +83,16 @@ nav ul li a:hover {
 }
 
 .gallery-item {
-    width: 23vw;
+    width: 98vw;
     border-color: #111111;
     border-width: 4px;
     border-style: solid;
+}
+
+@media (min-width: 768px) {
+    .gallery-item {
+        width: 23vw;
+    }
 }
 
 .gallery-item img {

@@ -44,6 +44,8 @@ const lightboxContainer = document.getElementById("lightbox-container");
 const lightboxImage = document.getElementById("lightbox-image");
 const lightboxCaption = document.getElementById("lightbox-caption");
 
+let saved_scroll = window.scrollY;
+
 for (const item of galleryItems) {
     const newItem = document.createElement("div");
     newItem.classList.add("gallery-item");
@@ -65,6 +67,7 @@ for (const item of galleryItems) {
     newImage.src = item.image;
 
     newImage.addEventListener("click", function(e) {
+        saved_scroll = window.scrollY;
         content.style.display = "none";
         lightboxContainer.style.display = "block";
         lightboxImage.src = item.image;
@@ -80,9 +83,14 @@ for (const item of galleryItems) {
     galleryGrid.append(newItem);
 }
 
-lightboxImage.addEventListener("click", function(e) {
+function hideLightbox(e) {
     content.style.display = "block";
     lightboxContainer.style.display = "none";
     lightboxImage.src = "";
     lightboxCaption.innerText = "";
-})
+    window.scrollTo(0, saved_scroll);
+}
+
+lightboxImage.addEventListener("click", hideLightbox);
+
+document.addEventListener("keydown", hideLightbox);
