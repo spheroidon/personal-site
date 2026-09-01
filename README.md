@@ -3,7 +3,7 @@
 ### Currently has placeholder content
 
 ### Features:
-- Navbar with example links
-- Image gallery dynamically generated from a dict
+- Image gallery and navbar dynamically generated from dicts
 - Captions for images
 - Links within images in the gallery
+- Basic CSS styling
