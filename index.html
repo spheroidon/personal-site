@@ -2,28 +2,45 @@
 <html>
 
 <head>
-    <title>Spheroidon's Site</title>
+    <title>Spheroidon's Modpack</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="index.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <h1>Spheroidon</h1>
-        <p class="link-disclaimer">(links unrelated)</p>
-        <nav>
-            <ul id="navbar-items">
-            </ul>
-        </nav>
-        <p class="link-disclaimer">(links unrelated)</p>
-    </header>
-    <div class="separator"></div>
-    <div class="gallery-grid" id="gallery-grid"></div>
-    <div class="separator"></div>
-    <footer>
-        <h2 class="footer-text">The End</h2>
-    </footer>
+    <div class="lightbox-container" id="lightbox-container" style="display: none;">
+        <div class="lightbox-image-container">
+            <img id="lightbox-image">
+        </div>
+        <div class="lightbox-caption-container">
+            <p id="lightbox-caption"></p>
+        </div>
+    </div>
+    <div class="content" id="content">
+        <header>
+            <h1>Spheroidon's Modpack</h1>
+            <p>
+                I'm trying to make the world's largest 1.20.1 modpack, playable with 28GB (or less) of allocated RAM.
+                <br>
+                This site documents various funny screenshots and in-game moments I had while developing the modpack.
+                <br>
+                The modpack will be available for download once I break the record and get to ~2000 mods!
+            </p>
+            <p class="link-disclaimer">Links</p>
+            <nav>
+                <ul id="navbar-items">
+                </ul>
+            </nav>
+            <p class="link-disclaimer">(Will redirect to the proper profiles once they are made)</p>
+        </header>
+        <div class="separator"></div>
+        <div class="gallery-grid" id="gallery-grid"></div>
+        <div class="separator"></div>
+        <footer>
+            <h2 class="footer-text">The End</h2>
+        </footer>
+    </div>
 </body>
 
 </html>
