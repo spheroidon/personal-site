@@ -20,21 +20,81 @@ for (const item of navbarItems) {
 }
 
 const galleryItems = [
-    { "image": "images/stuck_stone_talus.png", "caption": "Stone Talus stuck inside of a tree" },
-    { "image": "images/rambler.png", "caption": "Rambler spotted" },
-    { "image": "images/morsel.png", "caption": "This fish looks so stupid I love it" },
+    {
+        "image": "images/stuck_stone_talus.png", "caption": "Stone Talus stuck inside of a tree", "mods": [
+            { "title": "Craft of the Wild", "link": "https://www.curseforge.com/minecraft/mc-mods/craft-of-the-wild-cotw" }
+        ]
+    },
+    {
+        "image": "images/rambler.png", "caption": "Rambler spotted", "mods": [
+            { "title": "Opposing Force", "link": "https://www.curseforge.com/minecraft/mc-mods/opposing-force" }
+        ]
+    },
+    {
+        "image": "images/morsel.png", "caption": "This fish looks so stupid I love it", "mods": [
+            { "title": "Fantastic Fishery", "link": "https://www.curseforge.com/minecraft/mc-mods/fantastic-fishery" }
+        ]
+    },
     { "image": "images/wise_skeleton.png", "caption": "Skeleton with a book???" },
-    { "image": "images/tntriangle.png", "caption": "This TNT triangle's hitbox causes my FPS to drop by 90% (ignore my hotbar)" },
-    { "image": "images/great_spawn.png", "caption": "i love spawning 200 blocks in the air" },
-    { "image": "images/portals.png", "caption": "portals" },
-    { "image": "images/shipbreaker.png", "caption": "close enough, welcome back Sandworm from Modular Bosses" },
-    { "image": "images/enderminy.png", "caption": "Enderminy" },
-    { "image": "images/cult.png", "caption": "Scary cult" },
-    { "image": "images/ghost.png", "caption": "AHH" },
-    { "image": "images/king_crimson.png", "caption": "King Crimson" },
-    { "image": "images/brain_damage.png", "caption": "Owch" },
-    { "image": "images/tunnel_gore.png", "caption": "Uh oh" },
-    { "image": "images/netherite_monstrosity.png", "caption": "Gun!!" }
+    {
+        "image": "images/tntriangle.png", "caption": "This TNT triangle's hitbox causes my FPS to drop by 90% (ignore my hotbar)", "mods": [
+            { "title": "Cursed items", "link": "https://www.curseforge.com/minecraft/mc-mods/cursed-items" }
+        ]
+    },
+    {
+        "image": "images/great_spawn.png", "caption": "i love spawning 200 blocks in the air", "mods": [
+            { "title": "Sky Villages", "link": "https://www.curseforge.com/minecraft/mc-mods/sky-villages-forge" }
+        ]
+    },
+    {
+        "image": "images/portals.png", "caption": "portals", "mods": [
+            { "title": "The Aether", "link": "https://www.curseforge.com/minecraft/mc-mods/aether" },
+            { "title": "The Undergarden", "link": "https://www.curseforge.com/minecraft/mc-mods/the-undergarden" },
+            { "title": "The Twilight Forest", "link": "https://www.curseforge.com/minecraft/mc-mods/the-twilight-forest" },
+            { "title": "Rats", "link": "https://www.curseforge.com/minecraft/mc-mods/rats" }
+        ]
+    },
+    {
+        "image": "images/shipbreaker.png", "caption": "close enough, welcome back Sandworm from Modular Bosses", "mods": [
+            { "title": "Aquamirae", "link": "https://www.curseforge.com/minecraft/mc-mods/aquamirae" }
+        ]
+    },
+    {
+        "image": "images/enderminy.png", "caption": "Enderminy", "mods": [
+            { "title": "Ender Zoology", "link": "https://www.curseforge.com/minecraft/mc-mods/ender-zoology" }
+        ]
+    },
+    {
+        "image": "images/cult.png", "caption": "Scary cult", "mods": [
+            { "title": "Cult of Azazel", "link": "https://www.curseforge.com/minecraft/mc-mods/cult-of-azazel" }
+        ]
+    },
+    {
+        "image": "images/ghost.png", "caption": "AHH", "mods": [
+            { "title": "Fangs 'n Claws", "link": "https://www.curseforge.com/minecraft/mc-mods/fangs-n-claws" }
+        ]
+    },
+    {
+        "image": "images/king_crimson.png", "caption": "King Crimson", "mods": [
+            { "title": "Roundabout", "link": "https://www.curseforge.com/minecraft/mc-mods/roundabout-the-jojo-mod" }
+        ]
+    },
+    {
+        "image": "images/brain_damage.png", "caption": "Owch", "mods": [
+            { "title": "Oreganized", "link": "https://www.curseforge.com/minecraft/mc-mods/oreganized" }
+        ]
+    },
+    {
+        "image": "images/tunnel_gore.png", "caption": "Uh oh", "mods": [
+            { "title": "Skarrier Mobs", "link": "https://www.curseforge.com/minecraft/mc-mods/skarrier-mobs" }
+        ]
+    },
+    {
+        "image": "images/netherite_monstrosity.png", "caption": "Gun!!", "mods": [
+            { "title": "Scorched Guns", "link": "https://www.curseforge.com/minecraft/mc-mods/scorched-guns" },
+            { "title": "L_Ender's Cataclysm", "link": "https://www.curseforge.com/minecraft/mc-mods/lendercataclysm" }
+        ]
+    }
 ]
 
 const galleryGrid = document.getElementById("gallery-grid");
@@ -43,6 +103,7 @@ const content = document.getElementById("content");
 const lightboxContainer = document.getElementById("lightbox-container");
 const lightboxImage = document.getElementById("lightbox-image");
 const lightboxCaption = document.getElementById("lightbox-caption");
+const lightboxModsFeatured = document.getElementById("lightbox-mods-featured");
 
 let saved_scroll = window.scrollY;
 
@@ -54,14 +115,6 @@ for (const item of galleryItems) {
     newItem.append(newImageContainer);
 
     let finalImageContainer = newImageContainer;
-    // if (item.link) {
-    //     const newImageLink = document.createElement("a");
-    //     newImageLink.href = item.link;
-    //     newImageLink.target = "_blank";
-    //     newImageLink.rel = "noopener noreferrer";
-    //     newImageContainer.append(newImageLink);
-    //     finalImageContainer = newImageLink;
-    // }
 
     const newImage = document.createElement("img");
     newImage.src = item.image;
@@ -72,6 +125,20 @@ for (const item of galleryItems) {
         lightboxContainer.style.display = "block";
         lightboxImage.src = item.image;
         lightboxCaption.innerText = item.caption;
+        lightboxModsFeatured.innerHTML = "Mods featured: N/A";
+        if (item.mods) {
+            let modsFeatured = "Mods featured: "
+            for (const [index, mod] of item.mods.entries()) {
+                let modLink = mod.link || "";
+                let modTitle = mod.title || "Unknown";
+                let modFeatured = " <a target=\"_blank\" rel=\"noopener noreferrer\" class=\"featured-mod\" href=\"" + modLink + "\">" + modTitle + "</a>";
+                if (index < item.mods.length - 1) {
+                    modFeatured += ","
+                }
+                modsFeatured += modFeatured;
+            }
+            lightboxModsFeatured.innerHTML = modsFeatured;
+        }
     })
 
     finalImageContainer.append(newImage);
@@ -91,6 +158,7 @@ function hideLightbox(e = null) {
     lightboxContainer.style.display = "none";
     lightboxImage.src = "";
     lightboxCaption.innerText = "";
+    lightboxModsFeatured.innerHTML = "";
     window.scrollTo(0, saved_scroll);
 }
 
