@@ -1,3 +1,9 @@
 # My Personal Site :D
 
-### Currently has placeholder content, I will update the site once I make stuff
+### Currently has placeholder content
+
+### Features:
+- Navbar with example links
+- Image gallery dynamically generated from a dict
+- Captions for images
+- Links within images in the gallery
