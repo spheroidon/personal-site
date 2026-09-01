@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Inter';
+    src: url(Inter.ttf) format('truetype');
+    font-weight: 100 900;
+}
+
+body {
+    background-color: #ffd930;
+    font-family: 'Inter';
+}
+
+h1 {
+    font-weight: 800;
+    color: #111111;
+    text-align: center;
+    font-size: 5rem;
+}
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 1rlh;
+}
+
+nav ul li a {
+    font-weight: 650;
+    color: #111111;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+    font-weight: 750;
+    color: #0c0c0c;
+}
+
+.link-disclaimer {
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #111111;
+}
+
+.space-title {
+    margin: 2rlh 0;
+}
