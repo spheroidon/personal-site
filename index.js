@@ -34,7 +34,7 @@ const galleryItems = [
     { "image": "images/king_crimson.png", "caption": "King Crimson" },
     { "image": "images/brain_damage.png", "caption": "Owch" },
     { "image": "images/tunnel_gore.png", "caption": "Uh oh" },
-    { "image": "images/netherite_monstrosity.png", "caption": "Gun!!"}
+    { "image": "images/netherite_monstrosity.png", "caption": "Gun!!" }
 ]
 
 const galleryGrid = document.getElementById("gallery-grid");
@@ -66,7 +66,7 @@ for (const item of galleryItems) {
     const newImage = document.createElement("img");
     newImage.src = item.image;
 
-    newImage.addEventListener("click", function(e) {
+    newImage.addEventListener("click", function (e) {
         saved_scroll = window.scrollY;
         content.style.display = "none";
         lightboxContainer.style.display = "block";
@@ -83,7 +83,10 @@ for (const item of galleryItems) {
     galleryGrid.append(newItem);
 }
 
-function hideLightbox(e) {
+function hideLightbox(e = null) {
+    if (e && e.type == "keydown" && e.key != "Escape") {
+        return
+    }
     content.style.display = "block";
     lightboxContainer.style.display = "none";
     lightboxImage.src = "";

@@ -5,5 +5,5 @@
 ### Features:
 - Image gallery and navbar dynamically generated from dicts
 - Captions for images
-- Links within images in the gallery
+- Lightbox for images
 - Basic CSS styling
