@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="content" id="content">
-        <header>
+        <div class="section">
             <h1>Spheroidon's Modpack</h1>
             <p>
                 I'm trying to make the world's largest Forge 1.20.1 modpack, playable with 28GB (or less) of allocated
@@ -35,9 +35,20 @@
                 </ul>
             </nav>
             <p class="link-disclaimer">(Will redirect to the proper profiles once they are made)</p>
-        </header>
+        </div>
         <div class="separator"></div>
-        <div class="gallery-grid" id="gallery-grid"></div>
+        <div class="section">
+            <nav>
+                <ul id="section-selector">
+                    <li><a id="section-button-gallery" aria-selected="true">Gallery</a></li>
+                    <li><a id="section-button-gallery" aria-selected="false">Changes</a></li>
+                    <li><a id="section-button-gallery" aria-selected="false">Devlog</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="section" id="section-gallery" style="display: block;">
+            <div class="gallery-grid" id="gallery-grid"></div>
+        </div>
         <div class="separator"></div>
         <footer>
             <h2 class="footer-text">The End</h2>

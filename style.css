@@ -9,7 +9,7 @@ body {
     font-family: 'Inter';
 }
 
-header {
+.section {
     border-color: #111111;
     border-width: 4px;
     border-style: solid;
@@ -17,7 +17,7 @@ header {
     padding: 1rlh;
 }
 
-header>p {
+.section>p {
     font-size: 1.2rem;
     text-align: center;
     font-weight: 550;
@@ -58,7 +58,12 @@ nav ul li a {
     font-size: 1.1rem;
 }
 
-nav ul li a:hover {
+nav ul li a[aria-selected="true"] {
+    color: #0c0c0c;
+    text-decoration: underline;
+}
+
+nav ul li a[aria-selected="false"]:hover {
     color: #0c0c0c;
     text-decoration: underline;
 }
@@ -79,11 +84,13 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1vw;
+    gap: 1rlh;
+    width: 100%;
+    height: 100%;
 }
 
 .gallery-item {
-    width: 98vw;
+    width: 90%;
     border-color: #111111;
     border-width: 4px;
     border-style: solid;
@@ -91,7 +98,7 @@ nav ul li a:hover {
 
 @media (min-width: 768px) {
     .gallery-item {
-        width: 23vw;
+        width: 400px;
     }
 }
 
@@ -116,19 +123,27 @@ nav ul li a:hover {
     position: absolute;
     top: 5vh;
     left: 5vw;
-    height: 90vh;
-    width: 90vw;
+    height: 85vh;
+    width: 85vw;
+    padding: 2.5vh 2.5vw;
+    border-color: #111111;
+    border-width: 4px;
+    border-style: solid;
 }
 
 .lightbox-image-container {
-    height: 92.5%;
+    height: 91.5%;
     text-align: center;
+    margin-bottom: 0.5%;
 }
 
 .lightbox-image {
-    width: 100%;
+    width: fit-content;
     height: 100%;
     object-fit: contain;
+    border-color: #111111;
+    border-width: 4px;
+    border-style: solid;
 }
 
 .lightbox-caption-container {
