@@ -118,6 +118,7 @@ for (const item of galleryItems) {
 
     const newImage = document.createElement("img");
     newImage.src = item.image;
+    newImage.loading = "lazy";
 
     newImage.addEventListener("click", function (e) {
         saved_scroll = window.scrollY;
