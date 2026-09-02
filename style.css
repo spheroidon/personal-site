@@ -59,8 +59,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    font-weight: 750;
     color: #0c0c0c;
+    text-decoration: underline;
 }
 
 .link-disclaimer {

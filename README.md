@@ -1,10 +1,6 @@
-# My Personal Site :D
-
-### Currently has placeholder content
+# Site for my Minecraft Modpack
 
 ### Features:
-- Image gallery and navbar dynamically generated from dicts
-- Captions for images
-- Lightbox for images
-- List of featured mods inside lightboxes
-- Basic CSS styling
+- Image gallery and navbar dynamically generated from dicts!
+- Captions and lightbox for images!
+- List of featured mods inside lightboxes!
