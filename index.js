@@ -166,3 +166,15 @@ function hideLightbox(e = null) {
 lightboxImage.addEventListener("click", hideLightbox);
 
 document.addEventListener("keydown", hideLightbox);
+
+const sections = ["gallery", "changes", "devlog"]
+
+function showSection(newSection) {
+    for (const section of sections) {
+        document.getElementById("section-"+section).style.display = "none";
+        document.getElementById("section-button-"+section).ariaSelected = "false";
+    }
+
+    document.getElementById("section-"+newSection).style.display = "block";
+    document.getElementById("section-button-"+newSection).ariaSelected = "true";
+}
