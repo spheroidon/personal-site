@@ -166,3 +166,13 @@ nav ul li a:hover {
 .featured-mod:hover {
     text-decoration: underline;
 }
+
+::selection {
+    background-color: #0c0c0c;
+    color: #ffd930;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
