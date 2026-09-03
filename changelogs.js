@@ -386,6 +386,155 @@ const changelog_5 = {
     - Turned on "Enable Small Nether Dungeons" in YUNG's Better Dungeons`
 }
 
+const changelog_6 = {
+    "title": "Version 6 - Artifacts",
+    "date": new Date(2026, 7, 6, 15, 0),
+    "content": `Added (Server):
+    - Create
+    - Create Repair
+    - Mixin Booster
+    - Lootr
+    - Lootr Liason
+    - ShatterLib
+    - Artifacts
+    - Relics
+    - Relics: Alex's Caves Compat
+    - Relics: Alex's Mobs Compat
+    - Reliquified Artifacts
+    - Cardiac
+    - Missing Cookery
+    - Christmas Grandma's Cabinet
+    - Another Plushies
+    - Nenu's Pop Plushies
+    - Nenufar's Swords & Weapons
+    - Legends Forge Series - Magic Fantasy
+    - Legends Forge Series - Samurais N Ninjas
+    - Legends Forge Series - European Medieval Knights
+    - Legends Forge Series - Vikings N Northerners
+    - Hollow Knight: Silksong Gear
+    - Guns Without Roses
+    - Guns Without Roses Additions
+    - Guns Without Roses : expansions
+    - Hopo Better Ruined Portals
+    - Hopo Better Underwater Ruins
+    - Hopo Better Mineshaft
+    - Cult of Azazel
+    - Sizeable Foliage
+    - Dinnerware
+    - Chalk
+    - Horseman
+    - Scholar
+    - Sooty Chimneys
+    - Monobank
+    - Wares
+    - The Salt
+    - Exposure
+    - Exposure Catalog
+    - Exposure: Polaroid
+    - Exposure: Expanded
+    - Naturalist
+    - Hamsters Plus Lite
+    - Infinite Pie
+    - Another Furniture
+    - Yet Another Furniture
+    - Building But Better
+    - Hearth & Home
+    - S&C Leather Armors
+    - Nightfall plague
+    - ChiwiPost
+    - The Summoner Awakens
+    - Glowing slime Mod: Reborn
+    - ERZ: Unbound
+    
+    Added (Client):
+    - Immersive UI
+    - Perception
+    
+    Disabled:
+    - Skarrier Mobs
+    
+    Config Changes:
+    - Changed "Ingame Menu Config Button Row" from 3 to 0 in Create
+    - Changed "Main Menu Config Button Row" from 2 to 0 in Create
+    - Disabled "Shulker Tooltips" in Quark
+    - Disabled "Food Tooltips" in Quark`
+}
+
+const changelog_7 = {
+    "title": "Version 7 - NoCube + Bosses",
+    "date": new Date(2026, 7, 6, 16, 30),
+    "content": `Added (Server):
+    - Load My F***ing Tags
+    - SuperMartijn642's Config Lib
+    - Balm
+    - Bookshelf
+    - CERBON's API
+    - Packet Fixer
+    - Waystones
+    - Nature's Compass
+    - Explorer's Compass
+    - Console Filter
+    - Ender Mail
+    - Ender IO
+    - Not So Shrimple (Reshrimpled)
+    - Comforts
+    - Bosses'Rise
+    - Bosses of Mass Destruction
+    - Bosses Delight
+    - Bosses Unleashed
+    - Better Compatibility Checker
+    - Better Archeology
+    - Wan's Ancient Beasts
+    - Wan's Storage Shelves
+    - Wan's Winter Comforts
+    - Wither: Reincarnated
+    - Mutant More
+    - Gobber
+    - Gobber Delight
+    - Aquaculture 2
+    - Aquaculture Delight
+    - The Undergarden
+    - Undergarden Delight
+    - Villagers Sell Animals
+    - Medieval Seedbags
+    - Non-Wandering Trader Profession
+    - NoCube's Better Blast Furnace
+    - NoCube's Craftable Music Discs
+    - Craftable Pottery Sherds
+    - Craftable Armor Trims
+    - Realm RPG: Treasure Balloons
+    - Realm RPG: Fallen Adventurers
+    - Realm RPG: Pots & Mimics
+    - Realm RPG: Dragon Wyrms
+    - Realm RPG: Imps & Demons
+    - Realm RPG: Creep & Crop
+    - Burn Me!
+    - Compost Me!
+    - Roundabout: The JoJo Mod
+    - Trample No More
+    - Amber Lib
+    - Liteminer
+    - Sullys Mod
+    - PaintersInc
+
+    Added (Client):
+    - Chat Heads
+    - Skin Layers 3D
+    - Enchantment Descriptions
+    - Better Third Person
+    - Better Biome Blend
+
+    Removed:
+    - ERZ: Unbound
+
+    Config Changes:
+    - Disabled "Custom Panorama" in Mutant More
+    - Disabled "Can Players Use Roll Ability" in Bosses'Rise
+    - Disabled "Will there be a GUI element displaying rolls" in Bosses'Rise
+    - Turned on "disableIngameError" in Load My F***ing Tags
+    - Enabled "Skip Third Person Front View" in Better Third Person`
+}
 
 
-export const changelogs = [changelog_1, changelog_2, changelog_3, changelog_4, changelog_5]
+
+export const changelogs = [changelog_1, changelog_2, changelog_3, changelog_4, changelog_5, changelog_6]
