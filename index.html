@@ -5,7 +5,7 @@
     <title>Spheroidon's Modpack</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="favicon.png">
-    <script src="index.js" defer></script>
+    <script type="module" src="index.js" defer></script>
 </head>
 
 <body>
@@ -40,9 +40,9 @@
         <div class="section">
             <div class="nav">
                 <ul id="section-selector">
-                    <li><a id="section-button-gallery" aria-selected="true" onclick="showSection('gallery')">Gallery</a></li>
-                    <li><a id="section-button-changes" aria-selected="false" onclick="showSection('changes')">Changes</a></li>
-                    <li><a id="section-button-devlog" aria-selected="false" onclick="showSection('devlog')">Devlog</a></li>
+                    <li><a id="section-button-gallery" aria-selected="true">Gallery</a></li>
+                    <li><a id="section-button-changes" aria-selected="false">Changes</a></li>
+                    <li><a id="section-button-devlog" aria-selected="false">Devlog</a></li>
                 </ul>
             </div>
         </div>
@@ -50,7 +50,6 @@
             <div class="gallery-grid" id="gallery-grid"></div>
         </div>
         <div class="section" id="section-changes" style="display: none;">
-            <p>Changes - TODO</p>
         </div>
         <div class="section" id="section-devlog" style="display: none;">
             <p>Devlog - TODO</p>

@@ -171,10 +171,38 @@ const sections = ["gallery", "changes", "devlog"]
 
 function showSection(newSection) {
     for (const section of sections) {
-        document.getElementById("section-"+section).style.display = "none";
-        document.getElementById("section-button-"+section).ariaSelected = "false";
+        document.getElementById("section-" + section).style.display = "none";
+        document.getElementById("section-button-" + section).ariaSelected = "false";
     }
 
-    document.getElementById("section-"+newSection).style.display = "block";
-    document.getElementById("section-button-"+newSection).ariaSelected = "true";
+    document.getElementById("section-" + newSection).style.display = "block";
+    document.getElementById("section-button-" + newSection).ariaSelected = "true";
+}
+
+for (const section of sections) {
+    const button = document.getElementById("section-button-" + section);
+    button.addEventListener("click", function (e) {
+        showSection(section);
+    });
+}
+
+const sectionChanges = document.getElementById("section-changes");
+
+import { changelogs } from "./changelogs.js";
+
+for (const changelog of changelogs.reverse()) {
+    const newDiv = document.createElement("div");
+
+    const newTitle = document.createElement("h3");
+    newTitle.innerText = changelog.title + " (" + changelog.date.toLocaleDateString() + ")";
+    newDiv.append(newTitle)
+
+    const newContent = document.createElement("p");
+    newContent.innerText = changelog.content;
+    newDiv.append(newContent);
+
+    const newSeparator = document.createElement("br");
+    newDiv.append(newSeparator);
+
+    sectionChanges.append(newDiv);
 }
