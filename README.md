@@ -4,7 +4,7 @@ I am currently trying to make the largest Minecraft Forge 1.20.1 Modpack, so I m
 
 You can try out the site [here](https://spheroidon.github.io/personal-site/)!
 
-The modpack itself is currently unavailable but will be released once I beat the goal and get to 2000 mods.
+The modpack itself is currently unavailable but will be released once I beat the goal and reach 2000 mods.
 
 ### Site Features:
 - Navbar with links dynamically generated from a dict!
